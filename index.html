@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raed Alhaj- Web developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                
+                <div class="logo-text">
+                    
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#about" class="nav-link">عني</a>
+                <a href="#education" class="nav-link">شهاداتي</a>
+                <a href="#skills" class="nav-link">مهاراتي</a>
+                <a href="#projects" class="nav-link">أعمالي</a>
+                <a href="#contact" class="nav-link">تواصل معي</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="تغيير الثيم">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-gradient"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-line">مرحباً، أنا</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-name">رائد محمد احمد محمد</span>
+                        <span class="title-role" id="title-role">مطور ويب محترف</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        مصمم جرافيكس ومطور ويب، أُقدّم حلولاً رقمية متكاملة تشمل تصميم واجهات جذابة وتطوير مواقع وتطبيقات تفاعلية باستخدام أحدث التقنيات مثل PHP وLaravel وMy Sql.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>استعرض أعمالي</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>تواصل معي</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="https://wa.me/+967775770538" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/+967775770538" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-frame">
+                            <img src="hero.jpg" alt="رائد الحاج" class="profile-image">
+                        </div>
+                        <div class="image-decoration"></div>
+                        <div class="image-dots">
+                            <div class="dot dot-1"></div>
+                            <div class="dot dot-2"></div>
+                            <div class="dot dot-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">سنوات خبرة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="17">0</span>
+                    <span class="stat-label">مشروع مكتمل</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">عميل راضي</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">عني</h2>
+                <p class="section-subtitle">تعرف على خلفيتي وخبراتي في مجال تطوير الويب</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        مصمم جرافيكس ومطور ويب محترف بخبرة تتجاوز السنة في تطوير وتصميم المواقع والتطبيقات الحديثة. أتمتع بمهارات متقدمة في بناء الواجهات الأمامية والخلفية باستخدام تقنيات مثل PHP وLaravel و My SQL، مع اهتمام كبير بتجربة المستخدم والتفاصيل التقنية.
+                    </p>
+                    <p>
+                        أسعى دائماً لتقديم حلول إبداعية تجمع بين الجمالية والكفاءة، بهدف تحويل الأفكار إلى منتجات رقمية ناجحة. أؤمن بأن التصميم المتقن والتطوير الذكي هما الأساس لتحقيق أهداف العمل وتعزيز حضور العلامة التجارية.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h3>خبرة متنوعة</h3>
+                                <p>أكثر من سنة في مجال تطوير الويب وتصميم الجرافكس</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h3>حلول مبتكرة</h3>
+                                <p>تصميمات تلبي احتياجات العملاء</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>تطوير نظيف</h3>
+                        <p>كود نظيف ومنظم يسهل الصيانة والتطوير</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>تصميم متجاوب</h3>
+                        <p>مواقع تعمل بشكل مثالي على جميع الأجهزة</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>أداء سريع</h3>
+                        <p>تحسين الأداء لضمان سرعة التحميل</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>تصميم جذاب</h3>
+                        <p>واجهات مستخدم عصرية وافكار جذابة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">شهاداتي وتعليمي</h2>
+                <p class="section-subtitle">الشهادات والمؤهلات التي حصلت عليها في مجال التكنولوجيا والإدارة</p>
+            </div>
+
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>بكالوريوس في تقنية المعلومات</h3>
+                        <p>درجة البكالوريوس في تقنية المعلومات <span class="highlight">جامعة صنعاء</span></p>
+                        <div class="education-date">2020 - 2024</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>شهادة دولية في إدارة المشاريع</h3>
+                        <p>شهادة دولية لإدارة المشاريع من منصة <span class="highlight">أليسون</span></p>
+                        <div class="education-date">2023</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>دبلوم تصميم الجرافكس</h3>
+                        <p>شهادة دبلوم تصميم الجرافكس من <span class="highlight">المعهد العام للاتصالات</span></p>
+                        <div class="education-date">2025</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>دبلوم تطوير مواقع الويب</h3>
+                        <p>شهادة دبلوم تطوير مواقع الويب من <span class="highlight">معهد بيم مستر</span></p>
+                        <div class="education-date">2025</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>دبلوم متوسط في اللغة الإنجليزية</h3>
+                        <p>دبلوم متوسط في اللغة الإنجليزية من <span class="highlight">معهد سيدز</span></p>
+                        <div class="education-date">2024</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>شهادة سيسكو في أمن المعلومات</h3>
+                        <p>شهادة سيسكو المتخصصة من <span class="highlight">المعهد العام للاتصالات</span></p>
+                        <div class="education-date">2024</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">مهاراتي</h2>
+                <p class="section-subtitle">التقنيات والأدوات التي أتقنها في تطوير الويب والتصميم</p>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-laptop-code"></i>
+                        الواجهات الأمامية
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="80"></div>
+                                    </div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">CSS3</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="80"></div>
+                                    </div>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Tailwind</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="70"></div>
+                                    </div>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="77"></div>
+                                    </div>
+                                    <span class="skill-percent">77%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">BootStrap</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="79"></div>
+                                    </div>
+                                    <span class="skill-percent">79%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        الواجهات الخلفية
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="60"></div>
+                                    </div>
+                                    <span class="skill-percent">60%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Laravel</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="65"></div>
+                                    </div>
+                                    <span class="skill-percent">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">My Sql</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="85"></div>
+                                    </div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-palette"></i>
+                        الجرافكس والتصميم
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-adobe"></i>
+                                <span class="program-icon">Ps</span>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Adobe Photoshop</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="90"></div>
+                                    </div>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-adobe"></i>
+                                <span class="program-icon">Ai</span>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Adobe Illustrator</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="85"></div>
+                                    </div>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-adobe"></i>
+                                <span class="program-icon">Id</span>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Adobe InDesign</span>
+                                <div class="skill-level">
+                                    <div class="skill-bar-container">
+                                        <div class="skill-bar" data-level="75"></div>
+                                    </div>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أعمالي المميزة</h2>
+                <p class="section-subtitle">معرض من بعض مشاريعي التي عملت عليها</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="web">الويب</button>
+                <button class="filter-btn" data-filter="graphics">الجرافكس</button>
+            </div>
+
+            <!-- Projects Gallery -->
+            <div class="gallery-grid">
+                <!-- Web Projects -->
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-image">
+                        <img src="images/img1.jpg" alt="موقع إلكتروني">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>موقع تجاري متكامل</h3>
+                            <p>موقع إلكتروني للمتاجر الإلكترونية مع نظام دفع آمن</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-image">
+                        <img src="images/img10.jpg" alt=" تصميم واجهة تفاعلية">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم واجهة تفاعلية</h3>
+                            <p>تصميم واجهة تفاعلية ومناسبة لموقعك</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="web">
+                    <div class="gallery-image">
+                        <img src="images/img2.jpg" alt="موقع مشاهدة الافلام والمسلسلات">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3> موقع مشاهدة الافلام والمسلسلات </h3>
+                            <p>موقع متكامل لمشاهدة الافلام والمسلسلات </p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphics Projects -->
+                <div class="gallery-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/ZA.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم سوشل ميديا دمج الصور جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/NF.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم سوشل ميديا دمج الصور جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/rom.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم دمج الصور جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden Projects (initially hidden) -->
+                <div class="gallery-item hidden-item" data-category="web">
+                    <div class="gallery-image">
+                        <img src="images/img3.jpg" alt="تطبيق ويب">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>منصة تعليمية</h3>
+                            <p>منصة تعليمية إلكترونية للدورات التدريبية</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/ka.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم دمج الصورة مع القمر جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/flowr.PNG" alt="تصميم">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم</h3>
+                            <p>تصميم سوشل ميديا جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/sa.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم سوشل ميديا سحبات جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/post.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم بوستر غزة جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/pentool.PNG" alt="تصميم شخصية">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم شخصية</h3>
+                            <p>Pentool تصميم ورسم القبطان نامق جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/pentol.PNG" alt="تصميم رسم">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم رسم</h3>
+                            <p>تصميم ورسم الطيور والاشكال جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/pic.PNG" alt="تصميم دمج الصور">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم دمج الصور</h3>
+                            <p>تصميم في دمج الصور جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/rest.PNG" alt="تصميم اعلان">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم اعلان</h3>
+                            <p>تصميم اعلان لمطعم جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/phone.PNG" alt="تصميم دمج الصور">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم دمج الصور</h3>
+                            <p>تصميم دمج الصور في الجوال</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/poster.PNG" alt="تصميم بوستر">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم بوستر</h3>
+                            <p>تصميم بوستر</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/number1.jpg" alt="تصميم دمج الصورة في رقم 1">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم دمج الصورة في رقم 1</h3>
+                            <p>تصميم سوشل ميديا</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/c1.PNG" alt="تصميم هوية بصرية">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم هوية بصرية</h3>
+                            <p>تصميم هوية بصرية متكاملة لشركة تقنية</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                                <span>Illustrator</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/pict.PNG" alt="تصميم في دمج الصور">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم في دمج الصور</h3>
+                            <p>تصميم سوشل ميديا جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/ca2.PNG" alt="حملة إعلانية">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>حملة إعلانية</h3>
+                            <p>تصميم حملة إعلانية لمنتج جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                                <span>After Effects</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/s.media.PNG" alt="تصميم سوشل ميديا">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم سوشل ميديا</h3>
+                            <p>تصميم إعلان لمطعم جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                                <span>Illustrator</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/rexona مونتج.PNG" alt="حملة إعلانية">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>حملة إعلانية</h3>
+                            <p>تصميم حملة إعلانية لمنتج جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                                <span>Illustrator</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/APPLE.jpg" alt="تصميم دمج صور">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم دمج صور</h3>
+                            <p>تصميم سوشل ميديا دمج الصور</p>
+                            <div class="project-tech">
+                                <span>Adobe Photoshop</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/amazon.PNG" alt="حملة إعلانية">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>حملة إعلانية</h3>
+                            <p>تصميم حملة إعلانية لمنتج جديد</p>
+                            <div class="project-tech">
+                                <span>Photoshop</span>
+                                <span>After Effects</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item hidden-item" data-category="graphics">
+                    <div class="gallery-image">
+                        <img src="images/ccal1.PNG" alt="تصميم مطبوعات">
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="project-details">
+                            <h3>تصميم مطبوعات</h3>
+                            <p>تصميم مطبوعات تسويقية لفعالية</p>
+                            <div class="project-tech">
+                                <span>Illustrator</span>
+                                <span>InDesign</span>
+                            </div>
+                            <div class="gallery-links">
+                                <a href="#" class="gallery-link" title="عرض المشروع">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="show-more-container">
+                <button class="btn btn-primary" id="showMoreBtn">إظهار المزيد</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Message Section -->
+    <section id="my-message" class="my-message">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">رسالتي</h2>
+            </div>
+            
+            <div class="message-content">
+                <div class="message-card">
+                    <div class="message-icon">
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <p>
+                        في رحلة الحياة، كل تحدي هو فرصة للنمو، وكل سقوط هو بداية لنهوض أقوى. آمن بقدراتك، واجعل شغفك وقودك، فالعالم ينتظر بصمت إبداعك. لا تتوقف عن التعلم، ولا تتراجع عن أحلامك، فالمستقبل يصنعه أولئك الذين يجرؤون على الحلم والعمل.
+                    </p>
+                    <div class="message-signature">- رائد الحاج</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">تواصل معي</h2>
+                <p class="section-subtitle">هل لديك مشروع في ذهنك؟ دعنا نتحدث!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>البريد الإلكتروني</h3>
+                            <p><a href="mailto:readalhaj0@gmail.com" target="_blank" rel="noopener noreferrer">readalhaj0@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>الهاتف</h3>
+                            <p><a href="tel:+967775770538">+967775770538</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>الموقع</h3>
+                            <p>صنعاء، اليمن</p>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">الاسم</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">البريد الإلكتروني</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">الموضوع</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">الرسالة</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>إرسال الرسالة</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    
+
+                </div>
+                
+                <div class="footer-text">
+                    <a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">
+                        <span id="footer-year"></span> جميع الحقوق محفوظة لدى رائد الحاج
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://wa.me/+967775770538" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://t.me/+967775770538" class="social-link">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" title="العودة لأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
