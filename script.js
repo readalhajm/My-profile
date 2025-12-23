@@ -546,25 +546,14 @@ const PortfolioApp = (function() {
         setupLoadingScreen: function() {
             if (!elements.loadingOverlay) return;
 
-            // Hide overlay as soon as DOM is ready to avoid waiting for all resources (images) to load
-            const hideOverlay = () => {
-                if (!elements.loadingOverlay || elements.loadingOverlay.dataset.hidden) return;
-                elements.loadingOverlay.dataset.hidden = '1';
-                elements.loadingOverlay.style.opacity = '0';
-                setTimeout(() => {
-                    if (elements.loadingOverlay) elements.loadingOverlay.style.display = 'none';
-                    isPageLoaded = true;
-                }, 500);
-            };
-
-            document.addEventListener('DOMContentLoaded', hideOverlay);
-
-            // Fallback: force hide after a short maximum wait so mobile doesn't hang
-            setTimeout(hideOverlay, 2500);
-
-            // Keep final cleanup after full load
             window.addEventListener('load', () => {
-                setTimeout(hideOverlay, 300);
+                setTimeout(() => {
+                    elements.loadingOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        elements.loadingOverlay.style.display = 'none';
+                        isPageLoaded = true;
+                    }, 500);
+                }, 1000);
             });
         },
 
