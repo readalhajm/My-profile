@@ -409,6 +409,29 @@ const PortfolioApp = (function() {
         setupParticles: function() {
             if (!elements.heroParticles) return;
 
+            // Reduce or disable particle generation on small screens to save CPU and battery
+            if (window.innerWidth < 768) {
+                for (let i = 0; i < 6; i++) {
+                    const particle = document.createElement('div');
+                    const size = Math.random() * 6 + 4;
+                    const posX = Math.random() * 100;
+                    const posY = Math.random() * 100;
+                    const opacity = Math.random() * 0.25 + 0.08;
+                    particle.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        background: rgba(37, 99, 235, ${opacity});
+                        border-radius: 50%;
+                        left: ${posX}%;
+                        top: ${posY}%;
+                        filter: blur(2px);
+                    `;
+                    elements.heroParticles.appendChild(particle);
+                }
+                return;
+            }
+
             const createParticle = () => {
                 const particle = document.createElement('div');
                 const size = Math.random() * 4 + 2;
@@ -437,13 +460,13 @@ const PortfolioApp = (function() {
                 }, 20000);
             };
 
-            // Create initial particles
-            for (let i = 0; i < 20; i++) {
-                setTimeout(createParticle, i * 200);
+            // Create initial (reduced) particles
+            for (let i = 0; i < 12; i++) {
+                setTimeout(createParticle, i * 250);
             }
 
-            // Continue creating particles
-            setInterval(createParticle, 1000);
+            // Continue creating particles at a lower rate
+            setInterval(createParticle, 1500);
         },
 
         setupTypingEffect: function() {
@@ -523,14 +546,25 @@ const PortfolioApp = (function() {
         setupLoadingScreen: function() {
             if (!elements.loadingOverlay) return;
 
-            window.addEventListener('load', () => {
+            // Hide overlay as soon as DOM is ready to avoid waiting for all resources (images) to load
+            const hideOverlay = () => {
+                if (!elements.loadingOverlay || elements.loadingOverlay.dataset.hidden) return;
+                elements.loadingOverlay.dataset.hidden = '1';
+                elements.loadingOverlay.style.opacity = '0';
                 setTimeout(() => {
-                    elements.loadingOverlay.style.opacity = '0';
-                    setTimeout(() => {
-                        elements.loadingOverlay.style.display = 'none';
-                        isPageLoaded = true;
-                    }, 500);
-                }, 1000);
+                    if (elements.loadingOverlay) elements.loadingOverlay.style.display = 'none';
+                    isPageLoaded = true;
+                }, 500);
+            };
+
+            document.addEventListener('DOMContentLoaded', hideOverlay);
+
+            // Fallback: force hide after a short maximum wait so mobile doesn't hang
+            setTimeout(hideOverlay, 2500);
+
+            // Keep final cleanup after full load
+            window.addEventListener('load', () => {
+                setTimeout(hideOverlay, 300);
             });
         },
 
@@ -938,28 +972,35 @@ const PortfolioApp = (function() {
         },
 
         setupLazyLoading: function() {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src || img.src;
-                        img.classList.remove('lazy');
-                        observer.unobserve(img);
-                    }
-                });
+            // Ensure native lazy-loading is enabled for images where supported.
+            const allImages = document.querySelectorAll('img');
+            allImages.forEach(img => {
+                if (!img.hasAttribute('loading')) {
+                    img.setAttribute('loading', 'lazy');
+                }
             });
 
-            images.forEach(img => imageObserver.observe(img));
+            // If project uses data-src pattern, observe and swap the src when visible
+            const lazyDataImages = document.querySelectorAll('img[data-src]');
+            if (lazyDataImages.length > 0) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            img.classList.remove('lazy');
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyDataImages.forEach(img => imageObserver.observe(img));
+            }
         },
 
         setupPreloading: function() {
-            // Preload critical resources
-            const criticalResources = [
-                'hero.jpg',
-                'images/img1.jpg',
-                'images/img2.jpg'
-            ];
+            // Preload only the most critical image to avoid excessive network contention on mobile.
+            const criticalResources = [ 'hero.jpg' ];
 
             criticalResources.forEach(src => {
                 const link = document.createElement('link');

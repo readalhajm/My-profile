@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raed Alhaj- Web developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                
+                <div class="logo-text">
+                    
+                </div>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#about" class="nav-link">عني</a>
+                <a href="#education" class="nav-link">شهاداتي</a>
+                <a href="#skills" class="nav-link">مهاراتي</a>
+                <a href="#projects" class="nav-link">أعمالي</a>
+                <a href="#contact" class="nav-link">تواصل معي</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="تغيير الثيم">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-gradient"></div>
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="greeting-line">مرحباً، أنا</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-name">رائد محمد احمد محمد</span>
+                        <span class="title-role" id="title-role">مطور ويب محترف</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        مصمم جرافيكس ومطور ويب، أُقدّم حلولاً رقمية متكاملة تشمل تصميم واجهات جذابة وتطوير مواقع وتطبيقات تفاعلية باستخدام أحدث التقنيات مثل PHP وLaravel وMy Sql.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>استعرض أعمالي</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>تواصل معي</span>
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social">
+                        <a href="https://wa.me/+967775770538" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://t.me/+967775770538" class="social-icon">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="image-frame">
+                            <img src="hero.jpg" alt="رائد الحاج" class="profile-image">
+                        </div>
+                        <div class="image-decoration"></div>
+                        <div class="image-dots">
+                            <div class="dot dot-1"></div>
+                            <div class="dot dot-2"></div>
+                            <div class="dot dot-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1">0</span>
+                    <span class="stat-label">سنوات خبرة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="17">0</span>
+                    <span class="stat-label">مشروع مكتمل</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-label">عميل راضي</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">عني</h2>
+                <p class="section-subtitle">تعرف على خلفيتي وخبراتي في مجال تطوير الويب</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        مصمم جرافيكس ومطور ويب محترف بخبرة تتجاوز السنة في تطوير وتصميم المواقع والتطبيقات الحديثة. أتمتع بمهارات متقدمة في بناء الواجهات الأمامية والخلفية باستخدام تقنيات مثل PHP وLaravel و My SQL، مع اهتمام كبير بتجربة المستخدم والتفاصيل التقنية.
+                    </p>
+                    <p>
+                        أسعى دائماً لتقديم حلول إبداعية تجمع بين الجمالية والكفاءة، بهدف تحويل الأفكار إلى منتجات رقمية ناجحة. أؤمن بأن التصميم المتقن والتطوير الذكي هما الأساس لتحقيق أهداف العمل وتعزيز حضور العلامة التجارية.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h3>خبرة متنوعة</h3>
+                                <p>أكثر من سنة في مجال تطوير الويب وتصميم الجرافكس</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="highlight-text">
+                                <h3>حلول مبتكرة</h3>
+                                <p>تصميمات تلبي احتياجات العملاء</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>تطوير نظيف</h3>
+                        <p>كود نظيف ومنظم يسهل الصيانة والتطوير</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>تصميم متجاوب</h3>
+                        <p>مواقع تعمل بشكل مثالي على جميع الأجهزة</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>أداء سريع</h3>
+                        <p>تحسين الأداء لضمان سرعة التحميل</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>تصميم جذاب</h3>
+                        <p>واجهات مستخدم عصرية وافكار جذابة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">شهاداتي وتعليمي</h2>
+                <p class="section-subtitle">الشهادات والمؤهلات التي حصلت عليها في مجال التكنولوجيا والإدارة</p>
+            </div>
+
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>بكالوريوس في تقنية المعلومات</h3>
+                        <p>درجة البكالوريوس في تقنية المعلومات <span class="highlight">جامعة صنعاء</span></p>
+                        <div class="education-date">2020 - 2024</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>شهادة دولية في إدارة المشاريع</h3>
+                        <p>شهادة دولية لإدارة المشاريع من منصة <span class="highlight">أليسون</span></p>
+                        <div class="education-date">2023</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>دبلوم تصميم الجرافكس</h3>
+                        <p>شهادة دبلوم تصميم الجرافكس من <span class="highlight">المعهد العام للاتصالات</span></p>
+                        <div class="education-date">2025</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>دبلوم تطوير مواقع الويب</h3>
+                        <p>شهادة دبلوم تطوير مواقع الويب من <span class="highlight">معهد بيم مستر</span></p>
+                        <div class="education-date">2025</div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+(This backup file contains full original content)...
