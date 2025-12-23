@@ -309,9 +309,31 @@ body {
 .mobile-menu-toggle span {
     width: 28px;
     height: 3px;
-    background: var(--text-primary);
+    background: var(--toggle-icon);
     transition: var(--transition-normal);
     border-radius: 2px;
+}
+
+/* Show hamburger and hide horizontal nav on small screens */
+@media (max-width: 992px) {
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1100;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-actions {
+        gap: 0.5rem;
+    }
+
+    /* Ensure toggle is visible against both themes */
+    .mobile-menu-toggle span {
+        background: var(--toggle-icon);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
 }
 
 /* Enhanced Hero Section */
@@ -520,6 +542,21 @@ body {
     background: var(--bg-card);
     transform: translateY(-5px) scale(1.02);
     box-shadow: var(--shadow-md);
+}
+
+/* Make hero's secondary button match primary button color on hover/active
+   without affecting other secondary buttons elsewhere */
+.hero-buttons .btn-secondary:hover,
+.hero-buttons .btn-secondary:focus {
+    background: var(--btn-gradient);
+    color: white;
+    transform: perspective(1000px) rotateX(-5deg) translateY(-5px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+.hero-buttons .btn-secondary:active {
+    transform: perspective(1000px) rotateX(-2deg) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
 }
 
 .hero-social {
